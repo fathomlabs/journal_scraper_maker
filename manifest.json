@@ -1,48 +1,48 @@
 {
-	"manifest_version": 2,
-	"name": "ScraperMaker",
-	"version": "0.1",
-	"description": "Guiding you through simple steps to make a scraper for any website, for use with quickscrape",
-	"icons": {
-		"16": "img/icon16.png",
-		"48": "img/icon48.png",
-		"57": "img/icon57.png",
-		"64": "img/icon64.png",
-		"128": "img/icon128.png"
-	},
-	"browser_action": {
-		"default_icon": {
-			"19": "img/icon48.png",
-			"38": "img/icon48.png"
-		},
-		"default_title": "Scrape this site"
-	},
-	"author": "Stephanie Smith-Unna",
-	"background": {
-		"scripts": ["js/eventPage.js"],
-		"persistance": false
-	},
-	"homepage_url": "https://github.com/fathomlabs/journal_scraper_maker",
+  "manifest_version": 2,
+  "name": "ScraperMaker",
+  "version": "0.1",
+  "description": "Guiding you through simple steps to make a scraper for any website, for use with quickscrape",
+  "icons": {
+    "16": "img/icon16.png",
+    "48": "img/icon48.png",
+    "57": "img/icon57.png",
+    "64": "img/icon64.png",
+    "128": "img/icon128.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "19": "img/icon48.png",
+      "38": "img/icon48.png"
+    },
+    "default_title": "Scrape this site"
+  },
+  "author": "Stephanie Smith-Unna",
+  "background": {
+    "scripts": ["js/eventPage.js"],
+    "persistance": false
+  },
+  "homepage_url": "https://github.com/fathomlabs/journal_scraper_maker",
 
-	"content_scripts": [
-		{
-			"css": ["css/scrapermaker.css"],
-			"js": [
-				"js/jquery-2.0.3.min.js",
-				"js/bootstrap.min.js",
-				"js/scrapermaker.js"
-			],
-			"matches": ["<all_urls>"]
-		}
-	],
+  "content_scripts": [
+    {
+      "css": ["css/scrapermaker.css"],
+      "js": [
+        "js/jquery-2.0.3.min.js",
+        "js/bootstrap.min.js",
+        "js/scrapermaker.js"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ],
 
-	"permissions": [
-		"activeTab", "contextMenus", "<all_urls>"
-	],
+  "permissions": [
+    "activeTab", "contextMenus", "<all_urls>"
+  ],
 
-	"content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
-	"web_accessible_resources": [
-		"img/icon128.png"
-	],
-	"offline_enabled": true
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+  "web_accessible_resources": [
+    "img/icon128.png"
+  ],
+  "offline_enabled": true
 }
