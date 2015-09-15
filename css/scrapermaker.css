@@ -1,0 +1,18 @@
+#sm-sidebar {
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 9999999;
+	display: none;
+	overflow: hidden;
+	box-sizing: border-box;
+	padding-bottom: 50px;
+	width: 20%;
+	height: 100%;
+	background: rgb(16, 16, 16);
+	text-shadow: none;
+	font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif;
+	text-rendering: optimizeLegibility;
+  	-webkit-hyphens: auto;
+  	word-wrap: break-word
+}
