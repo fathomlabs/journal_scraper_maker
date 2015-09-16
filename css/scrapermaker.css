@@ -7,11 +7,15 @@
   overflow: hidden;
   box-sizing: border-box;
   padding-bottom: 50px;
+  padding-top: 17px;
+  padding-left: 50px;
   width: 20%;
   height: 100%;
-  background: white;
+  background: rgb(147, 205, 117) url('chrome-extension://__MSG_@@extension_id__/img/icon57.png') 12px 11px no-repeat;
 }
 
 #sm-sidebar h1 {
-  color: blue;
+  color: rgb(53, 122, 129);
+  font-size: 42px;
+  text-align: center;
 }

@@ -25,7 +25,8 @@
   "homepage_url": "https://github.com/fathomlabs/journal_scraper_maker",
   "web_accessible_resources": [
     "html/sidebar.html",
-    "img/icon128.png"
+    "img/icon128.png",
+    "img/icon57.png"
   ],
   "content_scripts": [
     {
