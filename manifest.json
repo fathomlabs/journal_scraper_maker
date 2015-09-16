@@ -23,13 +23,17 @@
     "persistance": false
   },
   "homepage_url": "https://github.com/fathomlabs/journal_scraper_maker",
-
+  "web_accessible_resources": [
+    "html/sidebar.html",
+    "img/icon128.png"
+  ],
   "content_scripts": [
     {
-      "css": ["css/scrapermaker.css"],
+      "css": [
+        "css/scrapermaker.css"
+      ],
       "js": [
         "js/jquery-2.0.3.min.js",
-        "js/bootstrap.min.js",
         "js/scrapermaker.js"
       ],
       "matches": ["<all_urls>"]
@@ -38,11 +42,6 @@
 
   "permissions": [
     "activeTab", "contextMenus", "<all_urls>"
-  ],
-
-  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
-  "web_accessible_resources": [
-    "img/icon128.png"
   ],
   "offline_enabled": true
 }

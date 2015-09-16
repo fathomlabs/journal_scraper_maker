@@ -9,10 +9,9 @@
   padding-bottom: 50px;
   width: 20%;
   height: 100%;
-  background: rgb(16, 16, 16);
-  text-shadow: none;
-  font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif;
-  text-rendering: optimizeLegibility;
-    -webkit-hyphens: auto;
-    word-wrap: break-word
+  background: white;
+}
+
+#sm-sidebar h1 {
+  color: blue;
 }
