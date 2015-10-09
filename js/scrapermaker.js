@@ -9,7 +9,89 @@ function toggleSidebar(url) {
       body.append(data);
       $('#sm-sidebar').show();
     });
-    loadData(url);
+    var scraper = {
+      "url": "",
+      "elements": {
+        "journal_name": {
+          "selector": "",
+          "attribute": "text"
+        },
+        "journal_issn": {
+          "selector": "",
+          "attribute": "content"
+        },
+        "title": {
+          "selector": "",
+          "attribute": "content"
+        },
+        "keywords": {
+          "selector": "",
+          "attribute": "content"
+        },
+        "author_name": {
+          "selector": "",
+          "attribute": "content"
+        },
+        "date_published": {
+          "selector": "",
+          "attribute": "text",
+        },
+        "doi": {
+          "selector": "",
+          "attribute": "content"
+        },
+        "volume": {
+          "selector": "",
+          "attribute": "content"
+        },
+        "issue": {
+          "selector": "",
+          "attribute": "content"
+        },
+        "abstract": {
+          "selector": "",
+          "attribute": "content"
+        },
+        "fulltext_html": {
+          "selector": "",
+          "attribute": "href",
+          "download": {
+            "rename": "fulltext.html"
+          }
+        },
+        "fulltext_pdf": {
+          "selector": "",
+          "attribute": "href",
+          "download": {
+            "rename": "fulltext.pdf"
+          }
+        },
+        "fulltext_xml": {
+          "selector": "",
+          "attribute": "href",
+          "download": {
+            "rename": "fulltext.xml"
+          }
+        },
+        "supplementary_file": {
+          "selector": "",
+          "download": true
+        },
+        "figures_image": {
+          "selector": "",
+          "attribute": "href"
+        },
+        "license": {
+          "selector": "",
+          "attribute": "text"
+        },
+        "copyright": {
+          "selector": "",
+          "attribute": "text"
+        }
+      }
+    }
+    loadData(url, scraper);
   }
 }
 
@@ -41,13 +123,16 @@ function renderStatus(statusText) {
   console.log(statusText);
 }
 
-function loadData(url) {
+function loadData(url, scraper) {
   renderStatus('Determining subdomain and domain for ' + url);
 
     getSubdomainAndDomain(url, function(subdomainAndDomain) {
 
+    scraper.url = subdomainAndDomain;
+
     renderStatus('URL: ' + url + '\n' +
-        'Subdomain and domain: ' + subdomainAndDomain);
+        'Subdomain and domain: ' + subdomainAndDomain + '\n' +
+        'Scraper url: ' + scraper.url);
 
   }, function(errorMessage) {
     renderStatus('Cannot display subdomain and domain. ' + errorMessage);
