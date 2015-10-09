@@ -68,3 +68,12 @@ The scraperJSON format can have two root keys, they are:
   - model manifest file on examples from issue #2 on github
   - [background page](https://developer.chrome.com/extensions/background_pages) for underlying code
   - [event page](https://developer.chrome.com/extensions/event_pages) for tips straight after installation or updates
+  - first task is to get the url for first field of scraperJSON
+    - getCurrentTabUrl function from chrome-extension example tutorial
+    - next need to get domain (and possibly also subdomain) for scraperJSON
+      - relevant stack overflow answers [here](http://stackoverflow.com/questions/569137/how-to-get-domain-name-from-url)
+      - list of tld names from mozilla [here](https://publicsuffix.org/list/effective_tld_names.dat)
+      - guidelines on list (called publicsuffix list) [here](https://publicsuffix.org/learn/)
+      - javascript utility for publicsuffix list [here](https://github.com/gorhill/publicsuffixlist.js)
+      - tld.js for getting domain and subdomain [here](https://github.com/oncletom/tld.js) - I will use this one
+  - next task is to create a JSON (scraperJSON) and save it to the users machine (or give the option of saving it)

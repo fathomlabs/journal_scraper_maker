@@ -34,6 +34,7 @@
         "css/scrapermaker.css"
       ],
       "js": [
+        "js/tld.js",
         "js/jquery-2.0.3.min.js",
         "js/scrapermaker.js"
       ],
@@ -42,7 +43,7 @@
   ],
 
   "permissions": [
-    "activeTab", "contextMenus", "<all_urls>"
+    "tabs", "activeTab", "contextMenus", "<all_urls>"
   ],
   "offline_enabled": true
 }
