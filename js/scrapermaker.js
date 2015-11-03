@@ -7,6 +7,8 @@ function toggleSidebar(url) {
     var sidebar_file = chrome.extension.getURL('html/sidebar.html');
     $.get(sidebar_file, function(data) {
       body.append(data);
+      var startingtext = "Welcome to ScraperMaker! Click on an element below to add to the scraper for this page."
+      $('#activeboxtext').text(startingtext);
       $('#sm-sidebar').show();
     });
     var scraper = {
@@ -91,6 +93,7 @@ function toggleSidebar(url) {
         }
       }
     }
+    
     loadData(url, scraper);
   }
 }
