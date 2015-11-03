@@ -10,84 +10,84 @@ function toggleSidebar(url) {
       $('#sm-sidebar').show();
     });
     var scraper = {
-      "url": "",
-      "elements": {
-        "journal_name": {
-          "selector": "",
-          "attribute": "text"
+      url: "",
+      elements: {
+        journal_name: {
+          selector: "",
+          attribute: "text"
         },
-        "journal_issn": {
-          "selector": "",
-          "attribute": "content"
+        journal_issn: {
+          selector: "",
+          attribute: "content"
         },
-        "title": {
-          "selector": "",
-          "attribute": "content"
+        title: {
+          selector: "",
+          attribute: "content"
         },
-        "keywords": {
-          "selector": "",
-          "attribute": "content"
+        keywords: {
+          selector: "",
+          attribute: "content"
         },
-        "author_name": {
-          "selector": "",
-          "attribute": "content"
+        author_name: {
+          selector: "",
+          attribute: "content"
         },
-        "date_published": {
-          "selector": "",
-          "attribute": "text",
+        date_published: {
+          selector: "",
+          attribute: "text",
         },
-        "doi": {
-          "selector": "",
-          "attribute": "content"
+        doi: {
+          selector: "",
+          attribute: "content"
         },
-        "volume": {
-          "selector": "",
-          "attribute": "content"
+        volume: {
+          selector: "",
+          attribute: "content"
         },
-        "issue": {
-          "selector": "",
-          "attribute": "content"
+        issue: {
+          selector: "",
+          attribute: "content"
         },
-        "abstract": {
-          "selector": "",
-          "attribute": "content"
+        abstract: {
+          selector: "",
+          attribute: "content"
         },
-        "fulltext_html": {
-          "selector": "",
-          "attribute": "href",
-          "download": {
-            "rename": "fulltext.html"
+        fulltext_html: {
+          selector: "",
+          attribute: "href",
+          download: {
+            rename: "fulltext.html"
           }
         },
-        "fulltext_pdf": {
-          "selector": "",
-          "attribute": "href",
-          "download": {
-            "rename": "fulltext.pdf"
+        fulltext_pdf: {
+          selector: "",
+          attribute: "href",
+          download: {
+            rename: "fulltext.pdf"
           }
         },
-        "fulltext_xml": {
-          "selector": "",
-          "attribute": "href",
-          "download": {
-            "rename": "fulltext.xml"
+        fulltext_xml: {
+          selector: "",
+          attribute: "href",
+          download: {
+            rename: "fulltext.xml"
           }
         },
-        "supplementary_file": {
-          "selector": "",
-          "download": true
+        supplementary_file: {
+          selector: "",
+          download: true
         },
-        "figures_image": {
-          "selector": "",
-          "attribute": "href"
+        figures_image: {
+          selector: "",
+          attribute: "href"
         },
-        "license": {
-          "selector": "",
-          "attribute": "text"
+        license: {
+          selector: "",
+          attribute: "text"
         },
-        "copyright": {
-          "selector": "",
-          "attribute": "text"
+        copyright: {
+          selector: "",
+          attribute: "text"
         }
       }
     }
