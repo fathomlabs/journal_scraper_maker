@@ -15,6 +15,15 @@
   background: rgb(147, 205, 117) url('chrome-extension://__MSG_@@extension_id__/img/icon57.png') 12px 11px no-repeat;
 }
 
+#elementschecklist {
+  position: fixed;
+  top: 50%;
+  right: 1%;
+  width: 18%;
+  height: 30%;
+  background-color: rgb(53, 122, 129);
+}
+
 #sm-sidebar h1 {
   color: rgb(53, 122, 129);
   font-size: 42px;
