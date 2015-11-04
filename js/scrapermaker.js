@@ -10,14 +10,17 @@ function toggleSidebar(url) {
       var startingtext = "Welcome to ScraperMaker! Click on an element below to add to the scraper for this page."
       $('#activeboxtext').text(startingtext);
 
-      for (e in Object.getOwnPropertyNames(scraper.elements)) {
-        $('#elementschecklist').append(e);
+      for (e in Object.keys(scraper.elements)) {
+        $('#elementschecklist').append('<p>' + e + '</p>');
       }
-      for (var i = 0; i < scraper.elements.length; i++) {
-        console.log(Object.keys(scraper.elements)[i]);
+
+      var nelts = Object.keys(scraper.elements).length;
+
+      for (var i = 0; i < nelts; i++) {
+        var elt = Object.keys(scraper.elements)[i];
+        $('elementschecklist').append('<p>' + elt + '</p>');
+        console.log(elt);
       }
-      console.log(Object.keys(scraper.elements));
-      $('elementschecklist').append(Object.keys(scraper.elements)[1]);
 
       $('#sm-sidebar').show();
     });
