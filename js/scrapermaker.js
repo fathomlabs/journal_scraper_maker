@@ -9,12 +9,22 @@ function toggleSidebar(url) {
       body.append(data);
       var startingtext = "Welcome to ScraperMaker! Click on an element below to add to the scraper for this page."
       $('#activeboxtext').text(startingtext);
+
+      for (e in Object.getOwnPropertyNames(scraper.elements)) {
+        $('#elementschecklist').append(e);
+      }
+      for (var i = 0; i < scraper.elements.length; i++) {
+        console.log(Object.keys(scraper.elements)[i]);
+      }
+      console.log(Object.keys(scraper.elements));
+      $('elementschecklist').append(Object.keys(scraper.elements)[1]);
+
       $('#sm-sidebar').show();
     });
     var scraper = {
       url: "",
       elements: {
-        journal_name: {
+        "journal_name": {
           selector: "",
           attribute: "text"
         },
@@ -93,7 +103,6 @@ function toggleSidebar(url) {
         }
       }
     }
-    
     loadData(url, scraper);
   }
 }
