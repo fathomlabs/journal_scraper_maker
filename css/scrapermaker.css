@@ -2,9 +2,11 @@
   position: fixed;
   top: 0;
   right: 0;
+  left:80%;
+  bottom: 0;
+  overflow-y: scroll;
   z-index: 9999999;
   display: none;
-  overflow: hidden;
   box-sizing: border-box;
   padding-bottom: 50px;
   padding-top: 7px;
@@ -17,19 +19,11 @@
 
 #elementschecklist {
   position: fixed;
-  top: 32%;
+  top: 30%;
   right: 1%;
   width: 18%;
-  height: 63%;
+  height: 100%;
   background-color: rgb(53, 122, 129);
-}
-
-#checklisttitle {
-  position: fixed;
-  top: 28%;
-  right: 1%;
-  width: 18%;
-  height: 5%;
 }
 
 #sm-sidebar h1 {
@@ -66,7 +60,7 @@
 
 #elementschecklist p {
   color: white;
-  padding-top: 20%;
+  padding-top: 2%;
   padding-left: 20px;
   padding-right: 20px;
   font-size: 16px;
