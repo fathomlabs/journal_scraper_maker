@@ -14,16 +14,16 @@
   width: 20%;
   height: 100%;
   font-family: "Arial", sans-serif;
-  background: rgb(147, 205, 117) url('chrome-extension://__MSG_@@extension_id__/img/icon57.png') 5% 1% no-repeat;
+  background: white url('chrome-extension://__MSG_@@extension_id__/img/icon57.png') 5% 1% no-repeat;
 }
 
 #elementschecklist {
   position: fixed;
+  border-radius: 4px;
   top: 30%;
   right: 1%;
   width: 18%;
   height: 100%;
-  background-color: rgb(53, 122, 129);
 }
 
 #sm-sidebar h1 {
@@ -42,15 +42,15 @@
 
 #sm-activebox {
   position: fixed;
+  border-radius: 4px;
   top: 8%;
   right: 1%;
   width: 18%;
   height: 20%;
-  background-color: rgb(53, 122, 129);
 }
 
 #sm-activebox p {
-  color: white;
+  color:  #eb675e;
   padding-top: 10px;
   padding-left: 20px;
   padding-right: 20px;
@@ -59,10 +59,38 @@
 }
 
 #elementschecklist p {
-  color: white;
+  color:  #eb675e;
   padding-top: 2%;
   padding-left: 20px;
   padding-right: 20px;
   font-size: 16px;
   text-align: center;
+}
+
+#elementschecklist button {
+  -moz-box-shadow: inset 0px 39px 0px -24px #e67a73;
+  -webkit-box-shadow: inset 0px 39px 0px -24px #e67a73;
+  box-shadow: inset 0px 39px 0px -24px #e67a73;
+  background-color: #e4685d;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  border: 1px solid #ffffff;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 19px;
+  padding: 11px 15px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #b23e35;
+}
+
+#elementschecklist button:hover {
+  background-color: #eb675e;
+}
+
+#elementschecklist button:active {
+  position: relative;
+  top: 1px;
 }
