@@ -5,25 +5,7 @@ function toggleSidebar(url) {
   } else {
     var body = $('body');
     var sidebar_file = chrome.extension.getURL('html/sidebar.html');
-    $.get(sidebar_file, function(data) {
-      body.append(data);
-      var startingtext = "Welcome to ScraperMaker! Click on an element below to add to the scraper for this page."
-      $('#activeboxtext').text(startingtext);
-
-      for (e in Object.keys(scraper.elements)) {
-        $('#elementschecklist').append('<p>' + e + '</p>');
-      }
-
-      var nelts = Object.keys(scraper.elements).length;
-
-      for (var i = 0; i < nelts; i++) {
-        var elt = Object.keys(scraper.elements)[i];
-        $('elementschecklist').append('<p>' + elt + '</p>');
-        console.log(elt);
-      }
-
-      $('#sm-sidebar').show();
-    });
+    $.get(sidebar_file, buildSidebar);
     var scraper = {
       url: "",
       elements: {
@@ -108,6 +90,55 @@ function toggleSidebar(url) {
     }
     loadData(url, scraper);
   }
+}
+
+function buildSidebar(data) {
+  body.append(data);
+  var startingtext = "Welcome to ScraperMaker! Click on an element below to add to the scraper for this page."
+  $('#activeboxtext').text(startingtext);
+
+  // Loop through all scraper elements, give message to user, wait for click, then update scraper and move to the next element
+  for (elt in scraper.elements) {
+    $('#elementschecklist').append('<button name="' + elt + '" id="' + elt + '">' + elt + '</button>');
+    console.log(elt);
+
+    var buttonname = '#' + elt;
+    $(buttonname).click(function() {
+
+
+
+      // update active box text
+      $('#activeboxtext').text("click on the " + elt + " to add it to the scraper")
+
+      // get xpath from user click
+      $("#test").click(function() {
+        var thisxpath = getXPath(this);
+
+        // check that xpath looks right (with ok button)
+        $('#activeboxtext').text("using XPath: " + thisxpath + ", is this ok?");
+        $('#activeboxtext').append('<button name="checkok" "ok?" </button>');
+
+        // update scraper with user input
+        $(checkok).click(function() {
+          scraper.elt.selector = thisxpath;
+        });
+      });
+
+    });
+  }
+
+  $('#sm-sidebar').show();
+}
+
+function getXPath(element) {
+  var val = element.value;
+  var xpath = '';
+  for ( ; element && element.nodeType == 1; element.parentNode) {
+    var id = $(element.parentNode).children(element.tagName).index(element)+1;
+    id > 1 ? (id = '[' + id + ']') : (id = '');
+    xpath = '/' + element.tagName.toLowerCase() + id + xpath;
+  }
+  return xpath
 }
 
 /**
